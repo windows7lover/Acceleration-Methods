@@ -11,18 +11,35 @@ entries:
     folderitems:
 
     - title: Introduction
-      url: /ChebyshevAcceleration.html
+      url: /index.html
       output: web
       type: homepage
 
   - title: "2. Chebyshev Acceleration"
     output: web
     folderitems:
+    
 
-    - title: "AWS Cloud Security Review: Setup - Part 1"
-      url: /AWS-Cloud-Configuration-Security-Review-Setup-Part-1.html
+    - title: "Introduction"
+      url: /ChebyshevAcceleration.html#Introduction
       output: web, pdf
       type: pages
+
+    - title: "Optimal Methods and Minimax Polynomials"
+      url: /ChebyshevAcceleration.html#Optimal-Methods-and-Minimax-Polynomials
+      output: web, pdf
+      type: pages
+
+    - title: "The Chebyshev Method "
+      url: /ChebyshevAcceleration.html
+      output: web, pdf
+      type: pages
+
+    - title: "Notes and References"
+      url: /ChebyshevAcceleration.html
+      output: web, pdf
+      type: pages
+
 
   - title: "3. Nonlinear Acceleration"
     output: web, pdf
