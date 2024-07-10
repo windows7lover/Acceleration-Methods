@@ -11,7 +11,7 @@ entries:
     folderitems:
 
     - title: Introduction
-      url: /index.html
+      url: /ChebyshevAcceleration.html
       output: web
       type: homepage
 
