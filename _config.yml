@@ -100,6 +100,17 @@ defaults:
       sidebar: home_sidebar
       topnav: topnav
 
+  -
+    scope:
+      path: ""
+      type: "monograph"
+    values:
+      layout: "page"
+      comments: true
+      search: false
+      sidebar: mydoc_sidebar
+      topnav: topnav
+
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
