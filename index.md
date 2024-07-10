@@ -1,53 +1,49 @@
 ---
-title: "Cloud Security Wiki"
+title: "Acceleration Methods - Website"
 keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
 ---
-**Cloud Security Wiki** is an initiative to provide all Cloud security related resources to Security Researchers and developers at one place. 
 
-## How to use this wiki ?
+# Acceleration Methods
 
-Sidebar on the left list resources for cloud service providers and each contains following sections as of now:
+This website contains the notes and errata from the following monograph,
+> d’Aspremont, A., Scieur, D., & Taylor, A. (2021). *Acceleration methods*. Foundations and Trends® in Optimization.
 
-* **Blogs/Research**: It covers unique security related articles related to that platform.
-* **Tools**: Any tool related to the security of that platform that can help during pentest/audit activies for that platform.
+This monograph covers some recent advances in a range of acceleration techniques frequently used in convex optimization, namely the *Chebyshev Acceleration*, *Nonlinear Acceleration*, *Nesterov Acceleration/Optimizedc Gradient Methods*, *Accelerated Hybrid Proximal Extragradient/Catalyst* frameworks and *Restart* strategies. You can download a version of the monograph on [ArXiv](https://arxiv.org/abs/2101.09545).
 
-## Newsletter
+Feel free to e-mail us if you spot any typo or mistakes.
 
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" />
+## More details about the monograph
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+This monograph covers some recent advances in a range of acceleration techniques frequently used in convex optimization. We first use quadratic optimization problems to introduce two key families of methods, namely momentum and nested optimization schemes. They coincide in the quadratic case to form the Chebyshev method.
 
-<div id="mc_embed_signup">
-<form action="https://notsosecure.us20.list-manage.com/subscribe/post?u=139320b00ff973e025d930c8f&amp;id=18f8e3265e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-    <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">Subscribe to our newsletter below</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="" />
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_139320b00ff973e025d930c8f_18f8e3265e" tabindex="-1" value="" /></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" /></div>
-    </div>
-</form>
-</div>
+We discuss momentum methods in detail, starting with the seminal work of Nesterov (1983) and structure convergence proofs using a few master tem plates, such as that for optimized gradient methods, which provide the key benefit of showing how momentum methods optimize convergence guarantees. We further cover proximal acceleration, at the heart of the Catalyst and Accel erated Hybrid Proximal Extragradient frameworks, using similar algorithmic patterns.
 
-<!--End mc_embed_signup-->
+Common acceleration techniques rely directly on the knowledge of some of the regularity parameters in the problem at hand. We conclude by discussing restart schemes, a set of simple techniques for reaching nearly optimal convergence rates while adapting to unobserved regularity parameters. 
 
-## Contribute 
+## Bibtex
 
-It is awesome to see that you want to contribute to this wiki, which would directly help the community.
-You can contribute by adding any new piece of information on this wiki by:
-* tweet to [@notsosecure](https://twitter.com/notsosecure)
-* creating a pull request on [cloudsecwiki github repo](https://github.com/notsosecure/cloud-sec-wiki)
-* emailing me at [cloudsecwiki@notsosecure.com](mailto:cloudsecwiki@notsosecure.com)
+If our monograph was helpful in your research, please consider citing us.
 
-List of our awesome contributors to this wiki is at [#Contributors](https://github.com/NotSoSecure/cloud-sec-wiki/graphs/contributors)
+```
+@article{d2021acceleration,
+  title={Acceleration methods},
+  author={d’Aspremont, Alexandre and Scieur, Damien and Taylor, Adrien},
+  journal={Foundations and Trends{\textregistered} in Optimization},
+  volume={5},
+  number={1-2},
+  pages={1--245},
+  year={2021},
+  publisher={Now Publishers, Inc.}
+}
+```
 
+## Atuhors
+
+- [Alexandre d'Aspremont](https://www.di.ens.fr/~aspremon/)
+- [Damien Scieur](https://damienscieur.com)
+- [Adrien Taylor](https://adrientaylor.github.io)
 
 {% include links.html %}
