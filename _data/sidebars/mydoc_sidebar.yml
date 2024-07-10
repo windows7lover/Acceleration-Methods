@@ -31,12 +31,12 @@ entries:
       type: pages
 
     - title: "The Chebyshev Method "
-      url: /ChebyshevAcceleration.html
+      url: /ChebyshevAcceleration.html#The-Chebyshev-Method
       output: web, pdf
       type: pages
 
     - title: "Notes and References"
-      url: /ChebyshevAcceleration.html
+      url: /ChebyshevAcceleration.html#Notes-and-References
       output: web, pdf
       type: pages
 
