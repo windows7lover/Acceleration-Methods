@@ -21,4 +21,5 @@ search: exclude
   </url>
   {% endunless %}
   {% endfor %}
+  
 </urlset>

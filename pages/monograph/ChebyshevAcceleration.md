@@ -1,3 +1,12 @@
+---
+title: ChebyshevAcceleration
+published: true
+sidebar: mydoc_sidebar
+permalink: ChebyshevAcceleration.html
+folder: monograph
+---
+
+
 # Erratum on Chebyshev Acceleration
 
 Erratum on Chebyshev Acceleration
