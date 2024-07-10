@@ -3,8 +3,12 @@
 topnav:
 - title: Topnav
   items:
+    - title: Monograph FnT
+      external_url: https://www.nowpublishers.com/article/Details/OPT-036
+    - title: Arxiv
+      external_url: https://arxiv.org/abs/2101.09545
     - title: GitHub
-      external_url: https://github.com/notsosecure
+      external_url: https://github.com/windows7lover/Acceleration-Methods
 
 #Topnav dropdowns
 #topnav_dropdowns:

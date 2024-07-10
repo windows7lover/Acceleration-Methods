@@ -3,16 +3,16 @@ repository:
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Cloud Security Wiki
+topnav_title: Acceleration Method - Website
 # this appears on the top navigation bar next to the home button
 
-site_title: Cloud Security Wiki
+site_title: Acceleration Method - Website
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: NotSoSecure - A Claranet Group Company
+company_name: d'Aspremont A., Scieur D., Taylor A.
 # this appears in the footer
 
-github_editme_path: notsosecure/cloud-sec-wiki/blob/gh-pages/
+github_editme_path: 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
@@ -37,10 +37,10 @@ exclude:
 
 feedback_subject_line: Cloud Security Wiki Feedback
 
-feedback_email: cloudsecwiki@notsosecure.com
+feedback_email: damien.scieur@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-# feedback_disable: true
+feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
