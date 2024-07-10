@@ -2,11 +2,11 @@
 
 entries:
 - title: sidebar
-  product: Index
+  product: Table of Contents
   version:
   folders:
 
-  - title: Overview
+  - title: "1. Introduction"
     output: web
     folderitems:
 
@@ -15,7 +15,7 @@ entries:
       output: web
       type: homepage
 
-  - title: "Getting Started with Cloud Security"
+  - title: "2. Chebyshev Acceleration"
     output: web
     folderitems:
 
@@ -24,7 +24,7 @@ entries:
       output: web, pdf
       type: pages
 
-  - title: Resources
+  - title: "3. Nonlinear Acceleration"
     output: web, pdf
     folderitems:
 
@@ -49,13 +49,38 @@ entries:
       url: /docker.html
       output: web
 
-  - title: Trainings
+  - title: "4. Nesterov Acceleration"
     output: web, pdf
     folderitems:
 
     - title: Hacking and Securing Cloud Infrastructure Training
       url: http:\/\/www.notsosecure.com\/hacking-training\/cloud-hacking\/
       output: web
+      
+
+  - title: "5. Proximal Acceleration and Catalyst"
+    output: web, pdf
+    folderitems:
+    
+  - title: "A. Useful Inequalities"
+    output: web, pdf
+    folderitems:
+    
+  - title: "B. Variations on Nesterov Acceleration"
+    output: web, pdf
+    folderitems:
+    
+  - title: "C. On Worst-case Analyses for First-order Methods"
+    output: web, pdf
+    folderitems:
+    
+  - title: "Acknowledgements"
+    output: web, pdf
+    folderitems:
+    
+  - title: "References"
+    output: web, pdf
+    folderitems:
 
 
 
