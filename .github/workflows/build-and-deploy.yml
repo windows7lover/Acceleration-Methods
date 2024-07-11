@@ -3,7 +3,7 @@ name: Generate PDF
 on:
   push:
     branches:
-      - gh-pages  # Change this to your main branch name if different
+      - github-pages  # Change this to your main branch name if different
 
 jobs:
   build:
@@ -13,25 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install pandoc
-        run: sudo apt-get install pandoc  # Install pandoc if needed
-        
-      - name: Install pdflatex
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra
+      - name: Use Docker container with pandoc
+        uses: docker://pandoc/core
 
-      - name: Merge Markdown files to PDF
-        run: |
-          pandoc pages/monograph/*.md -o monograph_errata.pdf
-
-      - name: Copy PDF to pdfs directory
-        run: mv monograph_errata.pdf pdfs/  # Move PDF to a directory served by GitHub Pages
+        with:
+          args: |
+            pandoc --pdf-engine=xelatex pages/monograph/*.md -o monograph_errata.pdf
 
       - name: Commit and push updated PDF
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add pdfs/monograph_errata.pdf
+          git add docs/monograph_errata.pdf
           git commit -m "Auto-generated PDF"
           git push
