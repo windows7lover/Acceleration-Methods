@@ -6,4 +6,9 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-hello5
+# Aggregate Page
+
+{% assign sorted_pages = site.monographtypos | sort: 'path' %}
+{% for page in sorted_pages %}
+  {{ page.content }}
+{% endfor %}
