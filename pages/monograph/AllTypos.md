@@ -7,5 +7,5 @@ folder: monograph
 ---
 
 
-{% include_relative pages/monograph/Introduction.md %}
-{% include_relative pages/monograph/ChebyshevAcceleration.md %}
+{% include_relative Introduction.md %}
+{% include_relative ChebyshevAcceleration.md %}
