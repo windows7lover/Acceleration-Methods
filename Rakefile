@@ -12,7 +12,7 @@ namespace :jekyll do
     Dir.chdir('_site') do
       # Collect and order markdown files
       puts "Collecting markdown files..."
-      files = Dir['_typos/*.md'].sort
+      files = Dir['pages/monograph/*.md'].sort
       puts "Markdown files collected: #{files.join(', ')}"
 
       # Combine content of all markdown files into one

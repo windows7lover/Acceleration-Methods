@@ -1,39 +1,32 @@
-name: Build and Deploy
+name: Generate PDF
 
 on:
   push:
     branches:
-      - gh-pages  # Change this to match your main branch name
+      - gh-pages  # Change this to your main branch name if different
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3.4'  # Specify the latest supported Ruby version
+      - name: Install pandoc
+        run: sudo apt-get install pandoc  # Install pandoc if needed
 
-    - name: Install Bundler and dependencies
-      run: |
-        gem install bundler
-        bundle install --path vendor/bundle --retry 3
+      - name: Merge Markdown files to PDF
+        run: |
+          pandoc pages/monograph/*.md -o monograph_errata.pdf
 
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
+      - name: Copy PDF to docs directory
+        run: mv monograph_errata.pdf docs/  # Move PDF to a directory served by GitHub Pages
 
-    - name: Generate PDF
-      run: |
-        gem install pdfkit
-        sudo apt-get install -y wkhtmltopdf
-        bundle exec rake jekyll:generate_pdf
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: Commit and push updated PDF
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/monograph_errata.pdf
+          git commit -m "Auto-generated PDF"
+          git push

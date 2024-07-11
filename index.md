@@ -11,6 +11,8 @@ permalink: index.html
 This website contains the notes and errata from the following monograph,
 > d’Aspremont, A., Scieur, D., & Taylor, A. (2021). *Acceleration methods*. Foundations and Trends® in Optimization.
 
+[Click here to download the pdf containg all errors.](pdfs/output.pdf)
+
 This monograph covers some recent advances in a range of acceleration techniques frequently used in convex optimization, namely the *Chebyshev Acceleration*, *Nonlinear Acceleration*, *Nesterov Acceleration/Optimizedc Gradient Methods*, *Accelerated Hybrid Proximal Extragradient/Catalyst* frameworks and *Restart* strategies. You can download a version of the monograph on [ArXiv](https://arxiv.org/abs/2101.09545).
 
 Feel free to e-mail us if you spot any typo or mistakes.
