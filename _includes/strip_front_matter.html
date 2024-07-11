@@ -1,4 +1,0 @@
-{% capture content %}
-  {% include {{ include.file }} %}
-{% endcapture %}
-{{ content | split: "---" | last }}
