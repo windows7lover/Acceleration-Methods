@@ -13,9 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies (if needed)
-        # Add steps to install any dependencies required for your script
-
       - name: Generate PDF
         run: |
           # Add commands to generate your PDF from files.md in pages/monograph
