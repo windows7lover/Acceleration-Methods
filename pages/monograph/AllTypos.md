@@ -6,5 +6,9 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-{% include extract_content.html file="Introduction.md" %}
-{% include extract_content.html file="ChebyshevAcceleration.md" %}
+{% assign files = site.pages | where: "folder", "monograph" %}
+{% for file in files %}
+{% if file.extname == ".md" %}
+  {{ page.content }}
+{% endif %}
+{% endfor %}
