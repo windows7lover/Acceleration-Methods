@@ -6,6 +6,9 @@ permalink: alltypos.html
 folder: monograph
 ---
 
+{% capture introduction_content %}
+{% include_relative pages/monograph/Introduction.md %}
+{% endcapture %}
 
-{% include_relative Introduction.md %}
+
 {% include_relative ChebyshevAcceleration.md %}
