@@ -6,9 +6,10 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-{% assign files = site.pages | where: "folder", "monograph" %}
-{% for file in files %}
-{% if file.extname == ".md" %}
-  {{ page.content }}
-{% endif %}
-{% endfor %}
+{% paginate pages by 2 -%}
+  {% for page in pages -%}
+    {{ page.title | link_to: page.url }}
+  {%- endfor %}
+
+  {{- paginate | default_pagination }}
+{%- endpaginate %}
