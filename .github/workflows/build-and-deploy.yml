@@ -12,22 +12,3 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Install Pandoc
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-          
-      - name: Generate PDF
-        run: |
-          # Add commands to generate your PDF from files.md in pages/monograph
-          # Example:
-          pandoc pages/monograph/*.md -o pages/monograph/monograph_errata.pdf
-
-      - name: Commit and push updated PDF
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@users.noreply.github.com'
-          git add pages/monograph/monograph_errata.pdf
-          git commit -m "Auto-generated PDF of errata"
-          git push
