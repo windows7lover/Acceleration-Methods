@@ -8,7 +8,7 @@ folder: monograph
 
 # Aggregate Page
 
-{% assign sorted_pages = site.monographtypos | sort: 'path' %}
+{% assign sorted_pages = site.monographtypos %}
 {% for page in sorted_pages %}
   {{ page.content }}
 {% endfor %}
