@@ -6,9 +6,9 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-hello4!
+hello5
 
-{% assign files = site.pages | where: "folder", "monograph" %}
+{% assign files = site.pages %}
   {% for file in files %}
     {% if file.extname == "Introduction.md" %}
     {{ file.content }}
