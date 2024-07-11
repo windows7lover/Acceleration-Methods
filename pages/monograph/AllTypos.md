@@ -6,6 +6,11 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-hello2!
+hello4!
 
-{% include extract_content.html file="Introduction.md" %}
+{% assign files = site.pages | where: "folder", "monograph" %}
+  {% for file in files %}
+    {% if file.extname == "Introduction.md" %}
+    {{ file.content }}
+    {% endif %}
+  {% endfor %}
