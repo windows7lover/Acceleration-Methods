@@ -3,29 +3,28 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - gh-pages 
+      - gh-pages  # Change this to match your main branch name
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7.8'
+        ruby-version: '3.1'  # Specify the latest supported Ruby version
 
-    - name: Install specific Bundler version
-      run: gem install bundler -v 2.4.22
-      
-    - name: Install dependencies
+    - name: Install Bundler and dependencies
       run: |
-        bundle _2.4.22_ config set path '.vendor/bundle'
-        bundle _2.4.22_ install --jobs 4 --retry 3
+        gem install bundler
+        bundle install --path vendor/bundle --retry 3
 
     - name: Build Jekyll site
-      run: bundle _2.4.22_ exec jekyll build
+      run: bundle exec jekyll build
 
     - name: Generate PDF
       run: |
