@@ -6,10 +6,6 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-{% paginate pages by 2 -%}
-  {% for page in pages -%}
-    {{ page.title | link_to: page.url }}
-  {%- endfor %}
+hello!
 
-  {{- paginate | default_pagination }}
-{%- endpaginate %}
+{{ site.page }}
