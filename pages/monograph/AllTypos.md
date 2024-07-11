@@ -10,7 +10,6 @@ hello5
 
 {% assign files = site.pages %}
   {% for file in files %}
-    {% if file.extname == "Introduction.md" %}
     {{ file.content }}
     {% endif %}
   {% endfor %}
