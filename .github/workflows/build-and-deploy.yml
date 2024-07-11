@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7 
+        ruby-version: '2.7.8.225' 
 
     - name: Install specific Bundler version
-      run: gem install bundler
+      run: gem install bundler -v 2.4.22
 
     - name: Install dependencies
       run: |
-        gem install bundler
-        bundle install
+        bundle _2.4.22_ config set path '.vendor/bundle'
+        bundle _2.4.22_ install --jobs 4 --retry 3
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build
+      run: bundle _2.4.22_ exec jekyll build
 
     - name: Generate PDF
       run: |
