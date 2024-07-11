@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Use Docker container with pandoc
+      - name: Use  Docker container with pandoc
         uses: docker://pandoc/core
 
         with:
