@@ -7,7 +7,7 @@ folder: monograph
 ---
 
 {% capture introduction_content %}
-{% include_relative pages/monograph/Introduction.md %}
+{% include_relative Introduction.md %}
 {% endcapture %}
 
 
