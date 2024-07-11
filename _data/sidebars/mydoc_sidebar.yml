@@ -5,6 +5,11 @@ entries:
   product: Table of Contents
   version:
   folders:
+  
+  - title: "List of all typos"
+    url: /alltypos.html
+    output: web, pdf
+    type: pages
 
   - title: "1. Introduction"
     output: web
