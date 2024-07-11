@@ -66,10 +66,11 @@ collections:
     output: false
   monographtypos:
     output: true
-    layout: "page"
-    sidebar: mydoc_sidebar
-    search: false
-    topnav: topnav
+    values:
+      layout: "page"
+      sidebar: mydoc_sidebar
+      search: false
+      topnav: topnav
     order:
       - Introduction.md.md
       - ChebyshevAcceleration.md
