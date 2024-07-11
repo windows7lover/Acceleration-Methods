@@ -52,6 +52,10 @@ feedback_disable: true
 highlighter: rouge
 # library used for syntax highlighting
 
+# To output the final pdf
+plugins:
+  - jekyll-pdf
+    
 markdown: kramdown
 kramdown:
  input: GFM
