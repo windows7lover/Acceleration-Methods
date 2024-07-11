@@ -9,29 +9,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7' 
+        ruby-version: 2.7 
 
     - name: Install specific Bundler version
-      run: gem install bundler -v 2.4.22
+      run: gem install bundler
 
     - name: Install dependencies
       run: |
-        bundle _2.4.22_ config set path '.vendor/bundle'
-        bundle _2.4.22_ install --jobs 4 --retry 3
+        gem install bundler
+        bundle install
 
     - name: Build Jekyll site
-      run: bundle _2.4.22_ exec jekyll build
+      run: bundle exec jekyll build
 
     - name: Generate PDF
       run: |
         gem install pdfkit
         sudo apt-get install -y wkhtmltopdf
-        bundle _2.4.22_ exec rake jekyll:generate_pdf
+        bundle exec rake jekyll:generate_pdf
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
