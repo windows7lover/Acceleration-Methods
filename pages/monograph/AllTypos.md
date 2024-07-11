@@ -6,6 +6,9 @@ permalink: alltypos.html
 folder: monograph
 ---
 
-hello!
+hello2!
 
 {{ site.page }}
+{% site.page %}
+{{ site.posts }}
+{% site.posts %}
