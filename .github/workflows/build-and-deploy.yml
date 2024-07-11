@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - gh-pages 
+      - gh-pages  
 
 jobs:
   build:
@@ -17,19 +17,21 @@ jobs:
       with:
         ruby-version: '2.7'  
 
+    - name: Install specific Bundler version
+      run: gem install bundler -v 2.4.22
+
     - name: Install dependencies
       run: |
-        gem install bundler
-        bundle install
+        bundle _2.4.22_ install  # Use bundler 2.4.22 for bundle commands
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build
+      run: bundle _2.4.22_ exec jekyll build  # Use bundler 2.4.22 for Jekyll commands
 
     - name: Generate PDF
       run: |
         gem install pdfkit
         sudo apt-get install -y wkhtmltopdf
-        bundle exec rake jekyll:generate_pdf
+        bundle _2.4.22_ exec rake jekyll:generate_pdf  # Use bundler 2.4.22 for rake commands
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
