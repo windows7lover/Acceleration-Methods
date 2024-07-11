@@ -51,10 +51,6 @@ feedback_disable: true
 
 highlighter: rouge
 # library used for syntax highlighting
-
-# To output the final pdf
-plugins:
-  - jekyll-pdf
     
 markdown: kramdown
 kramdown:
@@ -76,37 +72,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      sidebar: home_sidebar
-      topnav: topnav
-  -
-    scope:
-      path: ""
-      type: "tooltips"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
-      search: true
-      sidebar: home_sidebar
-      topnav: topnav
-
-  -
-    scope:
-      path: ""
       type: "monograph"
     values:
       layout: "page"
@@ -118,12 +83,7 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
 - mydoc_sidebar
-- posts_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
 
 
 description: "Acceleration Methods - Website. This website contains the notes and errata from the following monograph, d’Aspremont, A., Scieur, D., & Taylor, A. (2021). *Acceleration methods*. Foundations and Trends® in Optimization."

@@ -8,7 +8,4 @@ folder: monograph
 
 hello2!
 
-{{ site.page }}
-{% site.page %}
-{{ site.posts }}
-{% site.posts %}
+{% include extract_content.html file="Introduction.md" %}
