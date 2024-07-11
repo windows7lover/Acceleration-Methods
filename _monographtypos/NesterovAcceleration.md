@@ -1,8 +1,6 @@
 ---
 title: Chapter 3. Nesterov Acceleration
 published: true
-layout: page
-sidebar: mydoc_sidebar
 permalink: NesterovAcceleration.html
 folder: monograph
 ---

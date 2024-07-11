@@ -72,8 +72,10 @@ collections:
       search: false
       topnav: topnav
     order:
-      - Introduction.md.md
+      - Introduction.md
       - ChebyshevAcceleration.md
+      - NonlinearAcceleration.md
+      - NesterovAcceleration.md
 
 
 # collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true

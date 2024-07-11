@@ -8,6 +8,6 @@ folder: monograph
 ---
 
 
-# Erratum in Chapter 2. NonlinearAcceleration
+# Erratum in Chapter 2. Nonlinear Acceleration
 
 No typo found so far!
