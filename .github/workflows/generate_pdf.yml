@@ -3,7 +3,7 @@ name: Generate PDF
 on:
   push:
     branches:
-      - gh-pages  # Change this to your default branch if different
+      - gh-pages  # Trigger the workflow on pushes to gh-pages
 
 jobs:
   build:
@@ -44,8 +44,16 @@ jobs:
       run: |
         python generate_pdf.py
 
-    - name: Upload PDF
-      uses: actions/upload-artifact@v2
-      with:
-        name: monograph-pdf
-        path: output.pdf
+    - name: Commit and push PDF to gh-pages
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git fetch origin
+        git checkout gh-pages || git checkout --orphan gh-pages
+        git reset --hard
+        cp output.pdf monograph_typos.pdf
+        git add monograph_typos.pdf
+        git commit -m "Update generated PDF"
+        git push -f origin gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
