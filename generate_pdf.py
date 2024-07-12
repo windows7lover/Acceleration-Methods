@@ -1,20 +1,37 @@
 import os
-import subprocess
+import pypandoc
 
-# Define the output file names
-latex_file = 'output.tex'
-pdf_file = 'output.pdf'
+# Define the directory containing the markdown files
+md_dir = '_monographtypos'
 
-# Convert the generated Markdown file to a LaTeX file using Pandoc with the custom template
-subprocess.run(['pandoc', '_site/combined.md', '-o', latex_file, '--template=template.tex'])
+# Define the output filenames
+combined_md_file = 'combined.md'
+output_pdf_file = 'output.pdf'
 
-# Compile the LaTeX file to PDF using pdflatex
-subprocess.run(['pdflatex', latex_file])
+def strip_yaml_header(content):
+    """Strip YAML header from the content."""
+    if content.startswith('---'):
+        parts = content.split('---', 2)
+        if len(parts) == 3:
+            return parts[2].strip()
+    return content
 
-# Clean up temporary files
-aux_files = [latex_file, 'output.aux', 'output.log']
-for aux_file in aux_files:
-    if os.path.exists(aux_file):
-        os.remove(aux_file)
+# Combine content from all markdown files
+combined_content = ""
 
-print(f'PDF generated: {pdf_file}')
+for filename in os.listdir(md_dir):
+    if filename.endswith('.md'):
+        filepath = os.path.join(md_dir, filename)
+        with open(filepath, 'r', encoding='utf-8') as file:
+            content = file.read()
+            content_without_header = strip_yaml_header(content)
+            combined_content += content_without_header + "\n\n"
+
+# Write the combined content to a markdown file
+with open(combined_md_file, 'w', encoding='utf-8') as file:
+    file.write(combined_content)
+
+# Convert the combined markdown file to PDF using pypandoc
+pypandoc.convert_file(combined_md_file, 'pdf', outputfile=output_pdf_file)
+
+print(f'PDF generated: {output_pdf_file}')
