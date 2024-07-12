@@ -5,6 +5,9 @@ on:
     branches:
       - gh-pages  # Trigger the workflow on pushes to gh-pages
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,6 +15,19 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7'  # Ensure this matches your Ruby version
+
+    - name: Install Jekyll dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -51,8 +67,8 @@ jobs:
         git fetch origin
         git checkout gh-pages || git checkout --orphan gh-pages
         git reset --hard
-        cp output.pdf monograph_typos.pdf
-        git add monograph_typos.pdf
+        cp output.pdf index.pdf
+        git add index.pdf
         git commit -m "Update generated PDF"
         git push -f origin gh-pages
       env:
