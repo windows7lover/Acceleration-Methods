@@ -7,9 +7,8 @@ entries:
   folders:
   
   - title: "Erratas"
-    url: /alltypos.html
     output: web, pdf
-    type: pages
+    folderitems:
     
     - title: "1. Introduction"
       url: /Introduction.html
