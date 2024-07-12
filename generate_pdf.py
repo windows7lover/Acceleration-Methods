@@ -20,16 +20,16 @@ for root, _, files in os.walk(markdown_dir):
 with open('combined.md', 'w', encoding='utf-8') as f:
     f.write(combined_markdown)
 
-# Convert the combined markdown file to a LaTeX file using Pandoc
-subprocess.run(['pandoc', 'combined.md', '-o', latex_file])
+# Convert the combined markdown file to a LaTeX file using Pandoc with the custom template
+subprocess.run(['pandoc', 'combined.md', '-o', latex_file, '--template=template.tex'])
 
 # Compile the LaTeX file to PDF using pdflatex
 subprocess.run(['pdflatex', latex_file])
 
 # Clean up temporary files
-os.remove('combined.md')
-os.remove(latex_file)
-os.remove('output.aux')
-os.remove('output.log')
+aux_files = ['combined.md', latex_file, 'output.aux', 'output.log']
+for aux_file in aux_files:
+    if os.path.exists(aux_file):
+        os.remove(aux_file)
 
 print(f'PDF generated: {pdf_file}')
