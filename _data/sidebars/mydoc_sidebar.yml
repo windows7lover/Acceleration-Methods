@@ -6,86 +6,54 @@ entries:
   version:
   folders:
   
-  - title: "List of all typos"
+  - title: "Erratas"
     url: /alltypos.html
     output: web, pdf
     type: pages
-
-  - title: "1. Introduction"
-    output: web
-    folderitems:
-
-    - title: Introduction
-      url: /Introduction.html
-      output: web
-      type: homepage
-
-  - title: "2. Chebyshev Acceleration"
-    output: web
-    folderitems:
     
-
-    - title: "Introduction"
-      url: /ChebyshevAcceleration.html#Introduction
+    - title: "1. Introduction"
+      url: /Introduction.html
       output: web, pdf
       type: pages
 
-    - title: "Optimal Methods and Minimax Polynomials"
-      url: /ChebyshevAcceleration.html#Optimal-Methods-and-Minimax-Polynomials
-      output: web, pdf
-      type: pages
-
-    - title: "The Chebyshev Method "
-      url: /ChebyshevAcceleration.html#The-Chebyshev-Method
-      output: web, pdf
-      type: pages
-
-    - title: "Notes and References"
-      url: /ChebyshevAcceleration.html#Notes-and-References
+    - title: "2. Chebyshev Acceleration"
+      url: /ChebyshevAcceleration.html
       output: web, pdf
       type: pages
 
 
-  - title: "3. Nonlinear Acceleration"
-    output: web, pdf
-    folderitems:
-
-    - title: Nonlinear Acceleration
+    - title: "3. Nonlinear Acceleration"
       url: /NonlinearAcceleration.html
-      output: web
+      output: web, pdf
 
-  - title: "4. Nesterov Acceleration"
-    output: web, pdf
-    folderitems:
-
-    - title: Nesterov Acceleration
+    - title: "4. Nesterov Acceleration"
       url: /NesterovAcceleration.html
-      output: web
+      output: web, pdf
       
 
-  - title: "5. Proximal Acceleration and Catalyst"
-    output: web, pdf
-    folderitems:
+    - title: "5. Proximal Acceleration and Catalyst"
+      output: web, pdf
+      url: /ProximalAccelerationandCatalyst.html
     
-  - title: "A. Useful Inequalities"
-    output: web, pdf
-    folderitems:
+    - title: "A. Useful Inequalities"
+      output: web, pdf
+      url: /UsefulInequalities.html
     
-  - title: "B. Variations on Nesterov Acceleration"
-    output: web, pdf
-    folderitems:
+    - title: "B. Variations on Nesterov Acceleration"
+      output: web, pdf
+      url: /VariationsonNesterovAcceleration.html
     
-  - title: "C. On Worst-case Analyses for First-order Methods"
-    output: web, pdf
-    folderitems:
+    - title: "C. On Worst-case Analyses for First-order Methods"
+      output: web, pdf
+      url: /OnWorst-caseAnalysesforFirst-orderMethods.html
     
-  - title: "Acknowledgements"
-    output: web, pdf
-    folderitems:
+    - title: "Acknowledgements"
+      output: web, pdf
+      url: /Acknowledgements.html
     
-  - title: "References"
-    output: web, pdf
-    folderitems:
+    - title: "References"
+      output: web, pdf
+      url: /References.html
 
 
 
