@@ -10,5 +10,7 @@ folder: monograph
 
 {% assign sorted_pages = site.monographtypos.order %}
 {% for page in sorted_pages %}
+
   {{ page.content }}
+  
 {% endfor %}
