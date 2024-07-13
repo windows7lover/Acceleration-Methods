@@ -3,7 +3,7 @@ title: Acknowledgements
 published: true
 layout: page
 sidebar: mydoc_sidebar
-permalink: UsefulInequalities.html
+permalink: Acknowledgements.html
 folder: monograph
 ---
 
