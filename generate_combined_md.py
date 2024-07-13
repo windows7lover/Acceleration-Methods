@@ -7,6 +7,7 @@ file_order = [
     'NonlinearAcceleration.md',
     'NesterovAcceleration.md',
     'ProximalAccelerationandCatalyst.md',
+    'RestartSchemes.md',
     'UsefulInequalities.md',
     'VariationsonNesterovAcceleration.md',
     'OnWorst-caseAnalysesforFirst-orderMethods.md',
