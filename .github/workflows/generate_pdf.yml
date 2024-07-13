@@ -47,7 +47,7 @@ jobs:
 
     - name: Install Pandoc
       if: steps.cache-pandoc.outputs.cache-hit != 'true'
-      run: sudo apt-get install -y pandoc
+      run: sudo apt-get install -y pypandoc
 
     - name: Run PDF generation script
       run: python generate_pdf.py
