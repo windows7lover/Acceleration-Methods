@@ -3,7 +3,7 @@ name: Generate PDF
 on:
   push:
     branches:
-      - main  # Replace with your default branch if different
+      - gh-pages  # Replace with your default branch if different
 
 jobs:
   build:
