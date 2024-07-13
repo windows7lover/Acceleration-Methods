@@ -3,7 +3,7 @@ name: Generate PDF
 on:
   push:
     branches:
-      - gh-pages  # Change this to your default branch if different
+      - main  # Replace with your default branch if different
 
 jobs:
   build:
@@ -13,59 +13,25 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3'  # Ensure this matches your Ruby version
-
-    - name: Install Bundler
-      run: gem install bundler
-
-    - name: Install Jekyll dependencies
-      run: bundle install
-
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
-
-    - name: Generate combined.md
-      run: python generate_combined_md.py  # Example script to generate combined.md
-
-    - name: Verify combined.md generation
-      run: ls -l combined.md || echo "combined.md not found"
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
 
-    - name: Cache Pandoc
-      id: cache-pandoc
-      uses: actions/cache@v3
-      with:
-        path: /usr/local/bin/pandoc
-        key: ${{ runner.os }}-pandoc
-
-    - name: Install Pandoc
-      if: steps.cache-pandoc.outputs.cache-hit != 'true'
-      run: sudo apt-get install -y pandoc
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pypandoc
 
     - name: Run PDF generation script
-      run: |
-        python generate_pdf.py
+      run: python generate_pdf.py
 
-    - name: Verify PDF generation
-      run: ls -l output.pdf || echo "output.pdf not found"
-
-    - name: Commit and push PDF to gh-pages
+    - name: Commit and push PDF
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git fetch origin
-        git checkout gh-pages || git checkout --orphan gh-pages
-        git reset --hard
-        cp output.pdf index.pdf || echo "Failed to copy output.pdf"
-        git add index.pdf
+        git add output.pdf
         git commit -m "Update generated PDF"
-        git push -f origin gh-pages
+        git push origin HEAD:main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

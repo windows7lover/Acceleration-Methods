@@ -1,28 +1,37 @@
-import subprocess
+import os
+import pypandoc
 
-# Define the output file names
-latex_file = 'output.tex'
-pdf_file = 'output.pdf'
+# Define the directory containing the markdown files
+md_dir = '_monographtypos'
 
-# Convert the generated Markdown file to a LaTeX file using Pandoc
-try:
-    subprocess.run(['pandoc', '_site/combined.md', '-o', latex_file], check=True)
-except subprocess.CalledProcessError as e:
-    print(f"Error converting Markdown to LaTeX: {e}")
-    exit(1)
+# Define the output filenames
+combined_md_file = 'combined.md'
+output_pdf_file = 'output.pdf'
 
-# Compile the LaTeX file to PDF using pdflatex
-try:
-    subprocess.run(['pdflatex', latex_file], check=True)
-except subprocess.CalledProcessError as e:
-    print(f"Error compiling LaTeX to PDF: {e}")
-    exit(1)
+def strip_yaml_header(content):
+    """Strip YAML header from the content."""
+    if content.startswith('---'):
+        parts = content.split('---', 2)
+        if len(parts) == 3:
+            return parts[2].strip()
+    return content
 
-# Move or copy the generated PDF to the expected location
-try:
-    subprocess.run(['mv', 'output.pdf', '../output.pdf'], check=True)
-except subprocess.CalledProcessError as e:
-    print(f"Error moving PDF file: {e}")
-    exit(1)
+# Combine content from all markdown files
+combined_content = ""
 
-print(f'PDF generated: {pdf_file}')
+for filename in os.listdir(md_dir):
+    if filename.endswith('.md'):
+        filepath = os.path.join(md_dir, filename)
+        with open(filepath, 'r', encoding='utf-8') as file:
+            content = file.read()
+            content_without_header = strip_yaml_header(content)
+            combined_content += content_without_header + "\n\n"
+
+# Write the combined content to a markdown file
+with open(combined_md_file, 'w', encoding='utf-8') as file:
+    file.write(combined_content)
+
+# Convert the combined markdown file to PDF using pypandoc
+pypandoc.convert_file(combined_md_file, 'pdf', outputfile=output_pdf_file)
+
+print(f'PDF generated: {output_pdf_file}')
