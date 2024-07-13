@@ -40,7 +40,7 @@ jobs:
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git pull origin gh-pages
-        cp _site/output.pdf ./output.pdf
+        cp output.pdf _site/output.pdf
         git add output.pdf
         git add _site/output.pdf
         git commit -m "Update generated PDF"
