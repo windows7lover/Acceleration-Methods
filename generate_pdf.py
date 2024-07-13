@@ -19,6 +19,19 @@ def strip_yaml_header(content):
 # Combine content from all markdown files
 combined_content = ""
 
+file_order = [
+    'Introduction.md',
+    'ChebyshevAcceleration.md',
+    'NonlinearAcceleration.md',
+    'NesterovAcceleration.md',
+    'ProximalAccelerationandCatalyst.md',
+    'UsefulInequalities.md',
+    'VariationsonNesterovAcceleration.md',
+    'OnWorst-caseAnalysesforFirst-orderMethods.md',
+    'Acknowledgements.md',
+    'References.md'
+]
+
 for filename in os.listdir(md_dir):
     if filename.endswith('.md'):
         filepath = os.path.join(md_dir, filename)
