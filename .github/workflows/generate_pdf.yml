@@ -28,10 +28,10 @@ jobs:
       run: bundle exec jekyll build
 
     - name: Generate combined.md
-      run: python generate_combined_md.py  # Generate combined.md in the specified order
+      run: python generate_combined_md.py  # Example script to generate combined.md
 
     - name: Verify combined.md generation
-      run: ls -l _site/combined.md || echo "combined.md not found"
+      run: ls -l combined.md || echo "combined.md not found"
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -48,17 +48,10 @@ jobs:
     - name: Install Pandoc
       if: steps.cache-pandoc.outputs.cache-hit != 'true'
       run: sudo apt-get install -y pandoc
-      
-    - name: Install python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pypandoc
 
-    - name: Create a combined markdown file
-      run: python generate_combined_md.py
-      
     - name: Run PDF generation script
-      run: python generate_pdf.py
+      run: |
+        python generate_pdf.py
 
     - name: Verify PDF generation
       run: ls -l output.pdf || echo "output.pdf not found"
