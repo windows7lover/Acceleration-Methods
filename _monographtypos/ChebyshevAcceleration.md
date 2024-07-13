@@ -16,7 +16,7 @@ Erratum on Chebyshev Acceleration
 
 Hello! This is another test:
 
-**The Cauchy-Schwarz Inequality**
+**The Cauchy-Schwarz Inequality.**
 
 This is the C-S inequality for two vectors $a, \, b \in\mathbb{R}^n$:
 
