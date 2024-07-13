@@ -14,7 +14,7 @@ Erratum on Chebyshev Acceleration
 
 ## Optimal Methods and Minimax Polynomials
 
-Hello! This is a test:
+Hello! This is another test:
 
 **The Cauchy-Schwarz Inequality**
 
