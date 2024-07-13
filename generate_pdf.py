@@ -32,13 +32,12 @@ file_order = [
     'References.md'
 ]
 
-for filename in os.listdir(md_dir):
-    if filename.endswith('.md'):
-        filepath = os.path.join(md_dir, filename)
-        with open(filepath, 'r', encoding='utf-8') as file:
-            content = file.read()
-            content_without_header = strip_yaml_header(content)
-            combined_content += content_without_header + "\n\n"
+for filename in file_order:
+    filepath = os.path.join(md_dir, filename)
+    with open(filepath, 'r', encoding='utf-8') as file:
+        content = file.read()
+        content_without_header = strip_yaml_header(content)
+        combined_content += content_without_header + "\n\n"
 
 # Write the combined content to a markdown file
 with open(combined_md_file, 'w', encoding='utf-8') as file:

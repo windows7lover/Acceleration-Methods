@@ -8,7 +8,7 @@ folder: monograph
 ---
 
 
-# Erratum on Chebyshev Acceleration
+# Erratum in Chapter 2. Chebyshev Acceleration
 
 Erratum on Chebyshev Acceleration
 

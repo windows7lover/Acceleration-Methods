@@ -39,8 +39,11 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
-        git add output.pdf
+        git pull origin gh-pages
+        cp _site/monograph_typos.pdf ./monograph_typos.pdf
+        git add monograph_typos.pdf
+        git add _site/monograph_typos.pdf
         git commit -m "Update generated PDF"
-        git push origin HEAD:main
+        git push origin gh-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

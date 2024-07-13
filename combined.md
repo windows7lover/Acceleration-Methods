@@ -1,4 +1,4 @@
-# Erratum in Acknowledgements
+# Erratum in Chapter 1. Introduction
 
 No typo found so far!
 
@@ -25,7 +25,7 @@ $$
 
 ## Notes and References
 
-# Erratum in Chapter 1. Introduction
+# Erratum in Chapter 2. Nonlinear Acceleration
 
 No typo found so far!
 
@@ -33,19 +33,7 @@ No typo found so far!
 
 No typo found so far!
 
-# Erratum in Chapter 2. Nonlinear Acceleration
-
-No typo found so far!
-
-# Erratum in Appendix C. On Worst-case Analyses for First-order Methods
-
-No typo found so far!
-
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
-
-No typo found so far!
-
-# Erratum in References
 
 No typo found so far!
 
@@ -54,6 +42,18 @@ No typo found so far!
 No typo found so far!
 
 # Erratum in Appendix B. Variations on Nesterov Acceleration
+
+No typo found so far!
+
+# Erratum in Appendix C. On Worst-case Analyses for First-order Methods
+
+No typo found so far!
+
+# Erratum in Acknowledgements
+
+No typo found so far!
+
+# Erratum in References
 
 No typo found so far!
 

@@ -1,5 +1,5 @@
 ---
-title: Chapter 2. Nonlinear Acceleration
+title: Chapter 3. Nonlinear Acceleration
 published: true
 layout: page
 sidebar: mydoc_sidebar
@@ -8,6 +8,6 @@ folder: monograph
 ---
 
 
-# Erratum in Chapter 2. Nonlinear Acceleration
+# Erratum in Chapter 3. Nonlinear Acceleration
 
 No typo found so far!

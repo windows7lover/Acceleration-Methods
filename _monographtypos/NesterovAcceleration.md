@@ -1,5 +1,5 @@
 ---
-title: Chapter 3. Nesterov Acceleration
+title: Chapter 4. Nesterov Acceleration
 published: true
 layout: page
 sidebar: mydoc_sidebar
@@ -8,6 +8,6 @@ folder: monograph
 ---
 
 
-# Erratum in Chapter 3. Nesterov Acceleration
+# Erratum in Chapter 4. Nesterov Acceleration
 
 No typo found so far!
