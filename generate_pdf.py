@@ -5,8 +5,8 @@ import pypandoc
 md_dir = 'Acceleration-Methods/_monographtypos'
 
 # Define the output filenames
-combined_md_file = 'combined.md'
-output_pdf_file = 'output.pdf'
+combined_md_file = '_site/combined.md'
+output_pdf_file = '_site/output.pdf'
 '''
 def strip_yaml_header(content):
     """Strip YAML header from the content."""
