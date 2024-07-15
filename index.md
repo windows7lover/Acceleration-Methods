@@ -42,7 +42,7 @@ If our monograph was helpful in your research, please consider citing us.
 }
 ```
 
-## Atuhors
+## Authors
 
 - [Alexandre d'Aspremont](https://www.di.ens.fr/~aspremon/)
 - [Damien Scieur](https://damienscieur.com)

@@ -56,6 +56,11 @@ entries:
     - title: "References"
       output: web, pdf
       url: /References.html
+      
+     
+  - title: "Erratas"
+    output: web, pdf
+    url: /Acknowledgements.html
 
 
 
