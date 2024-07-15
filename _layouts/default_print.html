@@ -4,9 +4,6 @@
 <head>
     {% include head_print.html %}
 
-	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.cache_buster }}">
-	<script src="{{ '/assets/js/script.js' | relative_url }}?v={{ site.cache_buster }}"></script>
-
 </head>
 
 <body class="{% if page.type == "title"%}title{% elsif page.type == "frontmatter" %}frontmatter{% elsif page.type == "first_page" %}first_page{% endif %} print">
