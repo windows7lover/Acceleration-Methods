@@ -1,6 +1,6 @@
 ---
 title: "Acceleration Methods - Website"
-keywords: sample homepage
+keywords: homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html

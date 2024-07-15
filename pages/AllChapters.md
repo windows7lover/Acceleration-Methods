@@ -3,7 +3,6 @@ title: Acceleration Methods: Erratum
 published: true
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
-folder: monograph
 ---
 
 # Acceleration Methods: Erratum
