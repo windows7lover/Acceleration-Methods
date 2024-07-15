@@ -26,6 +26,8 @@ No typo found so far!
 
 # Erratum in Chapter 4. Nesterov Acceleration
 
+test
+
 No typo found so far!
 
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
