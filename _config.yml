@@ -5,10 +5,10 @@ cache_buster: "20240715"
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Acceleration Method - Website
+topnav_title: Acceleration Methods - Website
 # this appears on the top navigation bar next to the home button
 
-site_title: Acceleration Method
+site_title: Acceleration Methods
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: d'Aspremont A., Scieur D., Taylor A.
@@ -37,7 +37,7 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Cloud Security Wiki Feedback
+feedback_subject_line:
 
 feedback_email: damien.scieur@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
