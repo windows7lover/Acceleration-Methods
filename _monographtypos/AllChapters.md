@@ -1,5 +1,5 @@
 ---
-title: Acceleration Methods: Erratum
+title: Erratum in Acceleration Methods
 published: true
 layout: page
 sidebar: mydoc_sidebar
@@ -11,4 +11,4 @@ folder: monograph
 
 # Acceleration Methods: Erratum
 
-{% include_relative combined.md %}
+this is a test
