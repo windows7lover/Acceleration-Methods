@@ -69,6 +69,7 @@ collections:
   monographtypos:
     output: true
     order:
+      - AllChapters.md
       - Introduction.md
       - ChebyshevAcceleration.md
       - NonlinearAcceleration.md
