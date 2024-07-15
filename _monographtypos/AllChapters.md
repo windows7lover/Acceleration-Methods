@@ -1,9 +1,10 @@
 ---
 title: Erratum in Acceleration Methods
 published: true
-layout: page
+layout: page_combined
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
+sidebar: mydoc_sidebar
 folder: monograph
 ---
 
@@ -11,4 +12,4 @@ folder: monograph
 
 # Acceleration Methods: Erratum
 
-this is a test
+{% include_relative combined.md %}
