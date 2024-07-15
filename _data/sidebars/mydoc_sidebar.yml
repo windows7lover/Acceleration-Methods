@@ -10,6 +10,11 @@ entries:
     output: web, pdf
     folderitems:
     
+    - title: "All chapters"
+      url: /AllChapters.html
+      output: web, pdf
+      type: pages
+    
     - title: "1. Introduction"
       url: /Introduction.html
       output: web, pdf
@@ -58,9 +63,17 @@ entries:
       url: /References.html
       
      
-  - title: "Erratas"
+  - title: "Downloads"
     output: web, pdf
-    url: /Acknowledgements.html
+    folderitems:
+    
+    - title: "Monograph (Arxiv version)"
+      output: web, pdf
+      url: pdfs/acceleration_monograph_v3.pdf
+    
+    - title: "Erratas (Pdf version)"
+      output: web, pdf
+      url: pdfs/acceleration_monograph_erratas.pdf
 
 
 

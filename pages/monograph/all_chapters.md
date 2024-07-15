@@ -1,12 +1,12 @@
 ---
-title: All Typos
+title: Acceleration Methods: Erratum
 published: true
 sidebar: mydoc_sidebar
-permalink: alltypos.html
+permalink: AllChapters.html
 folder: monograph
 ---
 
-# Aggregate Page
+# Acceleration Methods: Erratum
 
 {% assign sorted_pages = site.monographtypos.order %}
 {% for page in sorted_pages %}
