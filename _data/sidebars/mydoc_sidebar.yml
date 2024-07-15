@@ -69,11 +69,11 @@ entries:
     
     - title: "Monograph (Arxiv version)"
       output: web, pdf
-      url: "/pdfs/acceleration_monograph_v3.pdf"
+      url: "/acceleration_monograph_v3.pdf"
     
     - title: "Erratas (Pdf version)"
       output: web, pdf
-      url: "/pdfs/acceleration_monograph_erratas.pdf"
+      url: "/acceleration_monograph_erratas.pdf"
 
 
 
