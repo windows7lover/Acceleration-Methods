@@ -2,17 +2,15 @@
 
 No typo found so far!
 
-# Erratum on Chebyshev Acceleration
+# Erratum in Chapter 2. Chebyshev Acceleration
 
 Erratum on Chebyshev Acceleration
 
-## Introduction
-
 ## Optimal Methods and Minimax Polynomials
 
-This is a test:
+Hello! This is another test:
 
-**The Cauchy-Schwarz Inequality**
+**The Cauchy-Schwarz Inequality.**
 
 This is the C-S inequality for two vectors $a, \, b \in\mathbb{R}^n$:
 
@@ -20,20 +18,21 @@ $$
 \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 $$
 
+End of test!
 
-## The Chebyshev Method 
-
-## Notes and References
-
-# Erratum in Chapter 2. Nonlinear Acceleration
+# Erratum in Chapter 3. Nonlinear Acceleration
 
 No typo found so far!
 
-# Erratum in Chapter 3. Nesterov Acceleration
+# Erratum in Chapter 4. Nesterov Acceleration
 
 No typo found so far!
 
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
+
+No typo found so far!
+
+# Erratum in Chapter 6. Restart Schemes
 
 No typo found so far!
 
