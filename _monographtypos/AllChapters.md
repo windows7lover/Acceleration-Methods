@@ -12,4 +12,4 @@ folder: monograph
 
 # Acceleration Methods: Erratum
 
-{% include  combined.md %}
+{% include ../combined.md %}
