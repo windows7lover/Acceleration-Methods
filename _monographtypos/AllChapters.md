@@ -4,7 +4,6 @@ published: true
 layout: page
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
-sidebar: mydoc_sidebar
 folder: monograph
 ---
 
@@ -12,4 +11,4 @@ folder: monograph
 
 # Acceleration Methods: Erratum
 
-{% include combined.md %}
+{% include_relative combined.md %}
