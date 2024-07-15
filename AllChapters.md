@@ -1,7 +1,7 @@
 ---
 title: Acceleration Methods: Erratum
 published: true
-layout: page
+layout: page_combined
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
 sidebar: mydoc_sidebar
