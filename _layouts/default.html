@@ -2,6 +2,10 @@
 <html>
 <head>
     {% include head.html %}
+	
+	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.cache_buster }}">
+	<script src="{{ '/assets/js/script.js' | relative_url }}?v={{ site.cache_buster }}"></script>
+
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options

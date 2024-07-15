@@ -12,6 +12,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      
+    - name: Update cache_buster in _config.yml
+      run: |
+        chmod +x update_version.sh
+        ./update_version.sh
 
     - name: Set up Python
       uses: actions/setup-python@v2
