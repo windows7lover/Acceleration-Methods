@@ -4,7 +4,9 @@ published: true
 layout: page
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
+folder: monograph
 ---
+
 
 
 # Acceleration Methods: Erratum
