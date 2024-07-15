@@ -9,9 +9,4 @@ permalink: AllChapters.html
 
 # Acceleration Methods: Erratum
 
-{% assign sorted_pages = site.monographtypos.order %}
-{% for page in sorted_pages %}
-
-  {{ page.content }}
-  
-{% endfor %}
+{% include_relative combined.md %}

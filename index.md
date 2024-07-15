@@ -9,7 +9,7 @@ permalink: index.html
 # Acceleration Methods
 
 This website contains the notes and errata from the following monograph,
-> d’Aspremont, A., Scieur, D., & Taylor, A. (2021). *Acceleration methods*. Foundations and Trends® in Optimization.
+> Alexandre d’Aspremont, Damien Scieur & Adrien Taylor (2021). *Acceleration methods*. Foundations and Trends® in Optimization.
 
 [Click here to download the pdf containg all errors.](acceleration_monograph_erratas.pdf)
 
