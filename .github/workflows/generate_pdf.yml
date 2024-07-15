@@ -46,7 +46,8 @@ jobs:
         git config --global user.email 'github-actions@github.com'
         git pull origin gh-pages
         mv -f output.pdf acceleration_monograph_erratas.pdf
-        git add acceleration_monograph_erratas.pdf combined.md
+        mv -f combined.md _includes/combined.md
+        git add acceleration_monograph_erratas.pdf _includes/combined.md
         git commit -m "Update generated PDF"
         git push origin gh-pages
       env:
