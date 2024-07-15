@@ -4,6 +4,7 @@ published: true
 layout: page
 sidebar: mydoc_sidebar
 permalink: AllChapters.html
+sidebar: mydoc_sidebar
 folder: monograph
 ---
 
