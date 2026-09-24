@@ -26,9 +26,17 @@ No typo found so far!
 
 # Erratum in Chapter 4. Nesterov Acceleration
 
-test
+## Section 4.2 -- Gradient Method and Potential Functions
+### Section 4.2.3 --- How Conservative is this Worst-case Guarantee?
 
-No typo found so far!
+The definition of $f(x)$ should contains $+ b_\tau$, not $-b_\tau$:
+$$
+f(x)
+\begin{cases}
+  a_\tau |x| \textcolor{red}{+} b_\tau & \text{if } |x| \geq \tau, \\ 
+  \tfrac{L}{2} x^2 & \text{otherwise}, 
+  \end{cases}
+$$
 
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
 
