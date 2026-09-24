@@ -23,6 +23,7 @@ f(x) =
   \tfrac{L}{2} x^2 & \text{otherwise}, 
   \end{cases}
 $$
+(spotted by [Guillaume Delay](https://www.ljll.fr/delay/))
 
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
 
