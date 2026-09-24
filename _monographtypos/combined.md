@@ -31,7 +31,7 @@ No typo found so far!
 
 The definition of $f(x)$ should contains $+ b_\tau$, not $-b_\tau$:
 $$
-f(x)
+f(x) =
 \begin{cases}
   a_\tau |x| \textcolor{red}{+} b_\tau & \text{if } |x| \geq \tau, \\ 
   \tfrac{L}{2} x^2 & \text{otherwise}, 
