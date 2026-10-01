@@ -16,6 +16,7 @@ No typo found so far!
 ### Section 4.2.3 --- How Conservative is this Worst-case Guarantee?
 
 The definition of $f(x)$ should contain $+ b_\tau$, not $-b_\tau$:
+
 $$
 f(x) =
 \begin{cases}
@@ -23,6 +24,7 @@ f(x) =
   \tfrac{L}{2} x^2 & \text{otherwise}, 
   \end{cases}
 $$
+
 (spotted by [Guillaume Delay](https://www.ljll.fr/delay/))
 
 # Erratum in Chapter 5. Proximal Acceleration and Catalyst
