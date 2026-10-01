@@ -15,12 +15,12 @@ folder: monograph
 
 The definition of $f(x)$ should contain $+ b_\tau$, not $-b_\tau$:
 
-\[
+$$
 f(x) =
 \begin{cases}
   a_\tau |x| {\color{red}+} b_\tau & \text{if } |x| \geq \tau, \\ 
   \tfrac{L}{2} x^2 & \text{otherwise}, 
   \end{cases}
-\]
+$$
 
 (spotted by [Guillaume Delay](https://www.ljll.fr/delay/))
