@@ -13,11 +13,11 @@ folder: monograph
 ## Section 4.2 -- Gradient Method and Potential Functions
 ### Section 4.2.3 --- How Conservative is this Worst-case Guarantee?
 
-The definition of $f(x)$ should contains $+ b_\tau$, not $-b_\tau$:
+The definition of $f(x)$ should contain $+ b_\tau$, not $-b_\tau$:
 $$
 f(x) =
 \begin{cases}
-  a_\tau |x| \textcolor{red}{+} b_\tau & \text{if } |x| \geq \tau, \\ 
+  a_\tau |x| {\color{red}+} b_\tau & \text{if } |x| \geq \tau, \\ 
   \tfrac{L}{2} x^2 & \text{otherwise}, 
   \end{cases}
 $$

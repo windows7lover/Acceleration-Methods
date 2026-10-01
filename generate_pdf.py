@@ -45,6 +45,17 @@ with open(combined_md_file, 'w', encoding='utf-8') as file:
     file.write(combined_content)
 
 # Convert the combined markdown file to PDF using pypandoc
-pypandoc.convert_file(combined_md_file, 'pdf', outputfile=output_pdf_file)
+pypandoc.convert_file(
+    combined_md_file,
+    'pdf',
+    outputfile=output_pdf_file,
+    extra_args=[
+        '-V', 'colorlinks=true',
+        '-V', 'urlcolor=blue',
+        '-V', 'linkcolor=blue',
+        '-V', 'citecolor=blue',
+        '-V', r'header-includes=\usepackage{xcolor}',
+    ]
+)
 
 print(f'PDF generated: {output_pdf_file}')
